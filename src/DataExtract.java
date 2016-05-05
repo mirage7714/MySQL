@@ -16,7 +16,7 @@ public class DataExtract {
 				java.sql.Statement st = conn.createStatement();
 
 				){
-			st.execute("create table if not exists table"+title+" (id int, day varchar(10), code varchar(10), duedate varchar(10), time varchar(10), price int, amount int) engine = InnoDB");
+			st.execute("create table if not exists table"+title+" (id int, day varchar(20), code varchar(20), duedate varchar(20), time varchar(20), price int, amount int) engine = InnoDB");
 			java.sql.PreparedStatement pstmt = conn.prepareStatement("insert into table"+title+" values (?,?,?,?,?,?,?)");	
 			
 			String path = "/home/hadoop/Daily"+title+".csv";
